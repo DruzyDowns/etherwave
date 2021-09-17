@@ -1,0 +1,88 @@
+:root {
+  --page-back: #ffffff;
+  --page-fore: #111118;
+  --page-font-size: 24px;
+
+  --section-pad: 120px;
+  --section-border: #f8f8f8;
+  --section-height: 100vh;
+
+  --etherwave-form-width: 320px;
+  --etherwave-form-back: #111118;
+  --etherwave-form-fore: #ffffff;
+  --etherwave-form-border: #66666a;
+}
+
+#etherwave-form {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  max-width: var(--etherwave-form-width);
+  background: var(--etherwave-form-back);
+  color: var(--etherwave-form-fore);
+  padding: 24px;
+  display: grid;
+  grid-gap: 16px 8px;
+  grid-template-areas: "label label" "input eth" "button button";
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  display: grid; 
+  animation: fadein 0.4s 0.8s ease-in-out both;
+}
+
+#etherwave-form label {
+  grid-area: label;
+
+  display: block;
+  font-size: 16px;
+}
+
+#etherwave-form input {
+  grid-area: input;
+
+  appearance: none;
+  width: 100%;
+  border: none;
+  padding: 8px;
+
+  font-variation-settings: "wght" 600;
+  text-align: right;
+
+  background: var(--etherwave-form-back);
+  color: var(--etherwave-form-fore);
+  border: 1px solid var(--etherwave-form-border);
+  transition: border-color 0.2s ease-in-out;
+}
+
+#etherwave-form input:focus {
+  border: 1px solid var(--etherwave-form-fore);
+  outline: none;
+}
+
+#etherwave-form span {
+  grid-area: eth;
+}
+
+#etherwave-form button {
+  grid-area: button;
+  appearance: none;
+  border: none;
+  background: var(--etherwave-form-fore);
+  color: var(--etherwave-form-back);
+  font: inherit;
+  padding: 8px;
+  font-size: 16px;
+}
+
+/* for scroll snapping on larger screens */
+@supports (scroll-snap-type: y mandatory) {
+  @media (min-width: 640px) {
+    html {
+      scroll-snap-type: y mandatory;
+    }
+  
+    section {
+      scroll-snap-align: start;
+    }
+  }
+}

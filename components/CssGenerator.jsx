@@ -1,6 +1,6 @@
 import React from "react";
 
-class ScriptGenerator extends React.Component {
+class CssGenerator extends React.Component {
   constructor(props) {
     super(props);
     this.state = {wallet: 'xxxxxxxxxxxxxx'};
@@ -31,4 +31,4 @@ class ScriptGenerator extends React.Component {
   }
 }
 
-export default ScriptGenerator;
+export default CssGenerator;
