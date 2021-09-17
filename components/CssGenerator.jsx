@@ -3,28 +3,31 @@ import React from "react";
 class CssGenerator extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {wallet: 'xxxxxxxxxxxxxx'};
-    this.handleChange = this.handleChange.bind(this);
+    this.state = {formStyling: 'classic'};
+    this.handleStylingChange = this.handleStylingChange.bind(this);
   }
 
-  handleChange(event) {
-    this.setState({wallet: event.target.value});
+  handleStylingChange(event) {
+    this.setState({formStyling: event.target.value});
   }
 
   render() {
+    let FormStyleCode;
+
+    if (this.state.formStyling == "classic") {
+      FormStyleCode = <pre>{`classic`}</pre>;
+    } else {
+      FormStyleCode = <pre>{`wow`}</pre>;
+    }
+
     return (
       <form>
         <label>
-          wallet:
-          <input type="text" onChange={this.handleChange} />
+          style:
+          <input type="text" onChange={this.handleStylingChange} />
         </label>
         <div className="athens bg-oxford p-4 rounded-lg">
-            <pre>
-                <code className="">
-                    {`<script src="your/path/to/web3.js"></script>
-<script id="tipjar-script" src="your/path/to/etherwave.js" data-destinationWallet="${this.state.wallet}"></script>`}
-                </code>
-            </pre>
+            {FormStyleCode}  
         </div> 
       </form>
     );
