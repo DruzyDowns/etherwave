@@ -1,10 +1,14 @@
 const web3 = new Web3(Web3.givenProvider);
+const etherwaveBadge = document.getElementById("etherwave-badge");
+const etherwaveIcon = document.getElementById("etherwave-icon");
 const etherwaveForm = document.getElementById("etherwave-form");
 const etherwaveScript = document.getElementById("etherwave-script");
+const destinationWallet = etherwaveScript.getAttribute('data-destinationWallet');
+
 
 const send = async function (amount, destination) {
     const accounts = await window.ethereum.request({ method: "eth_requestAccounts" });
-    console.log(accounts);
+    console.log(`connecting to wallet(s) ${accounts}`);
 
     const wei = web3.utils.toWei(amount, "ether");
 
@@ -20,10 +24,6 @@ const send = async function (amount, destination) {
     }
 }
 
-//if (window.ethereum) {
-etherwaveForm.classList.add("has-eth");
-//}
-
 etherwaveForm.addEventListener("submit", function (event) {
     event.preventDefault()
     if (window.ethereum) { 
@@ -31,6 +31,6 @@ etherwaveForm.addEventListener("submit", function (event) {
         send(input.value, destinationWallet)
     } else {
         etherwaveForm.style.backgroundColor = "red"
-        alert("install a wallet already")
+        
     }
 })

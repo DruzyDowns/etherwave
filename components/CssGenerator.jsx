@@ -1,26 +1,20 @@
 import React from "react";
-
-function ClassicForm(props) {
-  return <pre>{`classic`}</pre>;
-}
-
-function WowForm(props) {
-  return <pre>{`wow`}</pre>;
-}
+import ClassicFormCSS from "./ClassicFormCSS";
+import BadgeFormCSS from "./BadgeFormCSS";
 
 function FormCodeStyling(props) {
   const isClassic = props.isClassic;
   if (isClassic) {
-    return <ClassicForm />;
+    return <ClassicFormCSS />;
   }
-  return <WowForm />;
+  return <BadgeFormCSS />;
 }
 
 class CssRedux extends React.Component {
   constructor(props) {
     super(props);
     this.handleClassicClick = this.handleClassicClick.bind(this);
-    this.handleWowClick = this.handleWowClick.bind(this);
+    this.handlebadgeClick = this.handlebadgeClick.bind(this);
     this.state = {isClassic: true};
   }
 
@@ -28,7 +22,7 @@ class CssRedux extends React.Component {
     this.setState({isClassic: true});
   }
 
-  handleWowClick() {
+  handlebadgeClick() {
     this.setState({isClassic: false});
   }
 
@@ -37,7 +31,7 @@ class CssRedux extends React.Component {
     return (
         <div>
             <div onClick={this.handleClassicClick}>classic</div>
-            <div onClick={this.handleWowClick}>wow</div>
+            <div onClick={this.handlebadgeClick}>badge</div>
             <div className="athens bg-oxford p-4 rounded-lg">
                 <FormCodeStyling isClassic={isClassic} />
             </div> 

@@ -1,4 +1,5 @@
-/* font from https://rsms.me/inter/ */
+function BadgeFormCSS(props) {
+  return <pre>{`/* font from https://rsms.me/inter/ */
 @import url('https://rsms.me/inter/inter.css');
 html { font-family: 'Inter', sans-serif; }
 @supports (font-variation-settings: normal) {
@@ -173,4 +174,7 @@ https://twitter.com/riklomas */
   to {
     transform: rotate(360deg);
   }
+}`}</pre>;
 }
+
+export default BadgeFormCSS;
