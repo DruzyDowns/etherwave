@@ -31,9 +31,9 @@ class Instructions extends React.Component {
   render() {
     return (
       <div>
-          <h3 className="py-4 text-2xl font-bold uppercase tracking-widest">getting started</h3>
+          <h3 className="py-4 text-2xl font-bold uppercase tracking-widest">getting started accepting eth transactions</h3>
           <p>You'll need a wallet to test (and receive!) the transactions. This project is currently only set up for the end user to <span className="font-bold">send</span> transactions to you using MetaMask, but you can use any Ethereum address/wallet you prefer to <span className="font-bold">receive</span> the transactions.</p>
-          <h3 className="pt-16 pb-2 text-2xl font-bold uppercase tracking-widest">install web3.js</h3>
+          <h3 className="pt-16 pb-2 text-2xl font-bold uppercase tracking-widest">add web3.js</h3>
           <p className="mb-4">Add <a className="underline" href="https://web3js.readthedocs.io/en/v1.5.2/index.html">Web3.js</a> to your website or project. The script you will be using below is dependent on the helper utilities included in Web3.js. You can learn more about it by reading the <a className="underline" href="https://web3js.readthedocs.io/en/v1.5.2/getting-started.html">docs here</a></p>
           <p className="mb-4">Download and install manually:</p>
           <DownloadWeb3 />
@@ -47,13 +47,13 @@ yarn: yarn add web3`}
                 </code>
             </pre>
         </div>
-        <h3 className="pt-16 pb-2 text-2xl font-bold uppercase tracking-widest">install etherwave.js</h3>
+        <h3 className="pt-16 pb-2 text-2xl font-bold uppercase tracking-widest">add etherwave.js</h3>
           <p className="mb-4">Add etherwave.js to your website or project. Grab it from here, then add your wallet address to the script in the next step.</p>
           <DownloadEtherwave /> 
-          <h3 className="pt-16 pb-2 text-2xl font-bold uppercase tracking-widest">add your wallet address when you call the script</h3>
+          <h3 className="pt-16 pb-2 text-2xl font-bold uppercase tracking-widest">use your wallet address when you call the script</h3>
           <p className="mb-4">Add your <span className="font-bold">receiving</span> wallet address to the <span className="font-bold bg-gray-200 px-1 rounded-sm">data-destinationWallet</span> attribute of the script tag. Double, triple, quadruple check that this is the wallet address you want eth sent to. If you put the wrong address in here you won't receive anything! </p> 
           <ScriptGenerator wallet="{}" />
-          <h3 className="pt-16 pb-2 text-2xl font-bold uppercase tracking-widest">add CSS</h3>
+          <h3 className="pt-16 pb-2 text-2xl font-bold uppercase tracking-widest">slap on some CSS to make it pretty (and work)</h3>
           <CssGenerator formType="{}" />
       </div>
     );
