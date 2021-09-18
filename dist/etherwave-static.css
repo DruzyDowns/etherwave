@@ -63,6 +63,7 @@ https://twitter.com/riklomas */
   grid-template-areas: "label label" "input eth" "button button";
   grid-template-columns: 1fr auto;
   align-items: center;
+  overflow: hidden;
 }
 
 #etherwave-form label {

@@ -6,7 +6,6 @@ class EtherwaveForm extends React.Component {
     this.state = {
       menuIsOpen: false
     };
-    this.state = {menuIsOpen: false};
   }
 
   render() {

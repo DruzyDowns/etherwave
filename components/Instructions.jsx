@@ -51,7 +51,7 @@ yarn: yarn add web3`}
           <p className="mb-4">Add etherwave.js to your website or project. Grab it from here, then add your wallet address to the script in the next step.</p>
           <DownloadEtherwave /> 
           <h3 className="pt-16 pb-2 text-2xl font-bold uppercase tracking-widest">use your wallet address when you call the script</h3>
-          <p className="mb-4">Add your <span className="font-bold">receiving</span> wallet address to the <span className="font-bold bg-gray-200 px-1 rounded-sm">data-destinationWallet</span> attribute of the script tag. Double, triple, quadruple check that this is the wallet address you want eth sent to. If you put the wrong address in here you won't receive anything! </p> 
+          <p className="mb-4">Add your <span className="font-bold">receiving</span> wallet address to the <span className="font-bold bg-gray-200 px-1 rounded-sm">data-destinationWallet</span> attribute of the script tag. Double, triple, quadruple check that this is the wallet address you want people to send ETH to. If you put the wrong address in here you won't receive anything! </p> 
           <ScriptGenerator wallet="{}" />
           <h3 className="pt-16 pb-2 text-2xl font-bold uppercase tracking-widest">slap on some CSS to make it pretty (and work)</h3>
           <CssGenerator formType="{}" />

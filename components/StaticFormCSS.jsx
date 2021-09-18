@@ -1,5 +1,5 @@
-function BadgeFormCSS(props) {
-  return <pre>{`/* etherwave popup modal form CSS */
+function StaticFormCSS(props) {
+  return <pre>{`/* etherwave static form CSS */
   
   /* font from https://rsms.me/inter/ */
 @import url("https://rsms.me/inter/inter.css");
@@ -17,15 +17,7 @@ https://twitter.com/riklomas */
 
 /* Edit your CSS variables here to change the values across the form */
 :root {
-  --page-back: #ffffff;
-  --page-fore: #111118;
-  --page-font-size: 24px;
-
-  --section-pad: 120px;
-  --section-border: #f8f8f8;
-  --section-height: 100vh;
-
-  --etherwave-form-width: 320px;
+  --etherwave-form-width: 100%;
   --etherwave-form-back: #fafafb;
   --etherwave-form-fore: #2b3946;
   --etherwave-form-border: #66666a;
@@ -37,10 +29,8 @@ https://twitter.com/riklomas */
     --etherwave-form-width: 100%;
   }
   #etherwave-form {
-    position: fixed;
-    bottom: 90px;
-    right: 0;
-    display: none;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 }
 
@@ -57,59 +47,25 @@ https://twitter.com/riklomas */
   }
 }
 
-/* Etherwave icon image styles — replace the background-image to customize  */
-
-#etherwave-icon {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  width: 64px;
-  height: 64px;
-  background-image: url(wave.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* Etherwave badge styles — the rotating text around the icon  */
-#etherwave-badge {
-  position: fixed;
-  bottom: 8px;
-  right: 8px;
-  width: 96px;
-  height: 96px;
-  background-image: url(send-eth.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center center;
-  animation: spin 20s linear infinite;
-  cursor: pointer;
-}
-
 /* Etherwave form styles */
+#etherwave-form-container {
+  position: relative;
+}
 
 #etherwave-form {
-  position: fixed;
-  bottom: 90px;
-  right: 24px;
   max-width: var(--etherwave-form-width);
   background: var(--etherwave-form-back);
   color: var(--etherwave-form-fore);
   border: 1px solid var(--etherwave-form-border);
   border-radius: 3px;
   padding: 24px;
+  padding-left: 25%;
+  padding-right: 25%;
   display: grid;
   grid-gap: 16px 8px;
   grid-template-areas: "label label" "input eth" "button button";
   grid-template-columns: 1fr auto;
   align-items: center;
-  display: none;
-  animation: fadein 0.4s 0.8s ease-in-out both;
-  overflow: hidden;
-}
-
-#etherwave-form.is-open {
-  display: grid;
-  animation: fadein 0.2s 0.2s ease-in-out both;
 }
 
 #etherwave-form label {
@@ -158,6 +114,34 @@ https://twitter.com/riklomas */
   color: var(--etherwave-form-fore);
 }
 
+/* Etherwave icon styles — replace the background-image to customize  */
+#etherwave-icon {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  background-image: url(wave.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Etherwave badge styles — the rotating text around the icon  */
+#etherwave-badge {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  width: 76px;
+  height: 76px;
+  background-image: url(send-eth.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  animation: spin 20s linear infinite;
+  pointer-events: none;
+}
+
 .pulse {
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
@@ -168,7 +152,7 @@ https://twitter.com/riklomas */
     opacity: 1;
   }
   50% {
-    opacity: 0.4;
+    opacity: 0.6;
   }
 }
 
@@ -187,4 +171,4 @@ https://twitter.com/riklomas */
 `}</pre>;
 }
 
-export default BadgeFormCSS;
+export default StaticFormCSS;
