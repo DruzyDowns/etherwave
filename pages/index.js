@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Prism from "prismjs";
 import Logo from '../components/Logo'
 import Instructions from '../components/Instructions'
 import EtherwaveForm from '../components/EtherwaveForm';
@@ -20,7 +19,7 @@ export default function Home() {
         <p className="text-2xl">Magically add Ethereum tipjar/donation transactions for MetaMask to your website.</p>
       </header>
       
-      <main className="lg:px-64">
+      <main className="lg:px-64 text-xl">
         <Instructions />
         
       </main>
