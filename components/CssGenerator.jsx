@@ -16,30 +16,34 @@ function FormCodeStyling(props) {
   return <WowForm />;
 }
 
-class CssGenerator extends React.Component {
+class CssRedux extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {formStyling: 'classic'};
-    this.handleStylingChange = this.handleStylingChange.bind(this);
+    this.handleClassicClick = this.handleClassicClick.bind(this);
+    this.handleWowClick = this.handleWowClick.bind(this);
+    this.state = {isClassic: true};
   }
 
-  handleStylingChange(event) {
-    this.setState({formStyling: event.target.value});
+  handleClassicClick() {
+    this.setState({isClassic: true});
+  }
+
+  handleWowClick() {
+    this.setState({isClassic: false});
   }
 
   render() {
+      const isClassic = this.state.isClassic;
     return (
-      <form>
-        <label>
-          style:
-          <input type="text" onChange={this.handleStylingChange} />
-        </label>
-        <div className="athens bg-oxford p-4 rounded-lg">
-            <FormCodeStyling isClassic={false} />
-        </div> 
-      </form>
+        <div>
+            <div onClick={this.handleClassicClick}>classic</div>
+            <div onClick={this.handleWowClick}>wow</div>
+            <div className="athens bg-oxford p-4 rounded-lg">
+                <FormCodeStyling isClassic={isClassic} />
+            </div> 
+        </div>
     );
   }
 }
 
-export default CssGenerator;
+export default CssRedux;
