@@ -35,7 +35,7 @@ export default function Home() {
           <img src="/eth.gif" alt="Ethereum Logo" className="h-16 w-auto" />
         </a>
       </footer>
-      <EtherwaveForm />
+      <EtherwaveForm menuIsOpen={false} />
       <script src="/web3.js"></script>
       <script id="etherwave-script" src="/etherwave.js" data-destinationwallet="0x6BD1C9d673B14E9D6d7C1Cab1dCD921Ab7bD002d"></script>
     </div>

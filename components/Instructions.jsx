@@ -10,6 +10,14 @@ const DownloadWeb3 = props => {
     <button className="py-2 px-4 bg-oxford athens rounded-lg shadow-md hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75 uppercase tracking-widest" onClick={downloadFile}>download web3.js</button>
   )
 }
+const DownloadEtherwave = props => {
+  const downloadEtherFile = () => {
+    window.location.href = "https://github.com/druzydowns/etherwave/raw/v1.2.11/dist/etherwave.js"
+  }
+  return (
+    <button className="py-2 px-4 bg-oxford athens rounded-lg shadow-md hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75 uppercase tracking-widest" onClick={downloadEtherFile}>download Etherwave.js</button>
+  )
+}
 
 class Instructions extends React.Component {
   constructor(props) {
@@ -38,8 +46,12 @@ class Instructions extends React.Component {
 yarn: yarn add web3`}
                 </code>
             </pre>
-        </div> 
-          <h3 className="pt-16 pb-2 text-2xl font-bold uppercase tracking-widest">add your wallet address</h3>
+        </div>
+        <h3 className="pt-16 pb-2 text-2xl font-bold uppercase tracking-widest">install etherwave.js</h3>
+          <p className="mb-4">Add etherwave.js to your website or project. Grab it from here, then add your wallet address to the script in the next step.</p>
+          <DownloadEtherwave /> 
+          <h3 className="pt-16 pb-2 text-2xl font-bold uppercase tracking-widest">add your wallet address when you call the script</h3>
+          <p className="mb-4">Add your <span className="font-bold">receiving</span> wallet address to the <span className="font-bold bg-gray-200 px-1 rounded-sm">data-destinationWallet</span> attribute of the script tag. Double, triple, quadruple check that this is the wallet address you want eth sent to. If you put the wrong address in here you won't receive anything! </p> 
           <ScriptGenerator wallet="{}" />
           <h3 className="pt-16 pb-2 text-2xl font-bold uppercase tracking-widest">add CSS</h3>
           <CssGenerator formType="{}" />

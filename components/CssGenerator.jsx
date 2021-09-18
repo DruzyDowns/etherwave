@@ -32,7 +32,7 @@ class CssRedux extends React.Component {
         <div>
             <div onClick={this.handleClassicClick}>classic</div>
             <div onClick={this.handlebadgeClick}>badge</div>
-            <div className="athens bg-oxford p-4 rounded-lg">
+            <div className="athens bg-oxford p-4 rounded-lg h-64 overflow-y-scroll">
                 <FormCodeStyling isClassic={isClassic} />
             </div> 
         </div>
