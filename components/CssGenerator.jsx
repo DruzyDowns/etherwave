@@ -1,5 +1,21 @@
 import React from "react";
 
+function ClassicForm(props) {
+  return <pre>{`classic`}</pre>;
+}
+
+function WowForm(props) {
+  return <pre>{`wow`}</pre>;
+}
+
+function FormCodeStyling(props) {
+  const isClassic = props.isClassic;
+  if (isClassic) {
+    return <ClassicForm />;
+  }
+  return <WowForm />;
+}
+
 class CssGenerator extends React.Component {
   constructor(props) {
     super(props);
@@ -12,14 +28,6 @@ class CssGenerator extends React.Component {
   }
 
   render() {
-    let FormStyleCode;
-
-    if (this.state.formStyling == "classic") {
-      FormStyleCode = <pre>{`classic`}</pre>;
-    } else {
-      FormStyleCode = <pre>{`wow`}</pre>;
-    }
-
     return (
       <form>
         <label>
@@ -27,7 +35,7 @@ class CssGenerator extends React.Component {
           <input type="text" onChange={this.handleStylingChange} />
         </label>
         <div className="athens bg-oxford p-4 rounded-lg">
-            {FormStyleCode}  
+            <FormCodeStyling isClassic={false} />
         </div> 
       </form>
     );

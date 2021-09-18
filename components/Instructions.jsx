@@ -1,6 +1,6 @@
 import React from "react";
 import ScriptGenerator from '../components/ScriptGenerator'
-import CssGenerator from '../components/CssGenerator'
+import CssRedux from '../components/CssRedux'
 
 const DownloadWeb3 = props => {
   const downloadFile = () => {
@@ -42,7 +42,7 @@ yarn: yarn add web3`}
           <h3 className="pt-16 pb-2 text-2xl font-bold uppercase tracking-widest">add your wallet address</h3>
           <ScriptGenerator wallet="{}" />
           <h3 className="pt-16 pb-2 text-2xl font-bold uppercase tracking-widest">add CSS</h3>
-          <CssGenerator formType="{}" />
+          <CssRedux formType="{}" />
       </div>
     );
   }
