@@ -30,7 +30,7 @@ class CssGenerator extends React.Component {
     return (
         <div className="">
           <div className=" h-72 flex justify-between mb-4">
-            <div className={`p-4 mr-2 overflow-hidden flex flex-col justify-between w-1/2 rounded-sm shadow-md h-full transform transition cursor-pointer ring-2 ${isClassic ? "-translate-y-1 ring-current" : "opacity-50 ring-gray-200"}`} onClick={() => this.setState({ isClassic: true, CssCodeValue: `${StaticCssCodeText}` })}>
+            <div className={`p-4 mr-2 overflow-hidden flex flex-col justify-between w-1/2 rounded-sm shadow-md h-full transform transition cursor-pointer ring-2 ${isClassic ? "-translate-y-1 ring-current" : "opacity-75 ring-gray-200"}`} onClick={() => this.setState({ isClassic: true, CssCodeValue: `${StaticCssCodeText}` })}>
               <h3 className="text-2xl">static form</h3>
               <p className="">A static form, which takes up 100% of the width of the container you place it in. Place it directly on your page, or use it to create your own modal.</p>
               <img className="w-full rounded-sm" src="/example-static.png" alt="example of static etherwave form" />
