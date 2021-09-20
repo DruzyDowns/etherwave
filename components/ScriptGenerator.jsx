@@ -7,7 +7,7 @@ class ScriptGenerator extends React.Component {
   constructor(props) {
     super(props);
     this.codeTextRef= React.createRef();
-    this.state = {wallet: 'xxx_YOUR_WALLET_ADDRESS_xxx', isCopied: false, setIsCopied: false, codeValue: `<script src="your/path/to/web3.js"></script>
+    this.state = {wallet: 'xxx_YOUR_WALLET_ADDRESS_xxx', isCopied: false, codeValue: `<script src="your/path/to/web3.js"></script>
 <script id="tipjar-script" src="your/path/to/etherwave.js" data-destinationWallet="$xxx_YOUR_WALLET_ADDRESS_xxx"></script>`};
   }
 
@@ -34,11 +34,11 @@ class ScriptGenerator extends React.Component {
         <p>{this.state.codeValue}</p>
         
         <div className="athens bg-oxford p-4 rounded-lg relative">
-          <CopyToClipboard className={`absolute top-2 right-2 ${this.state.isCopied ? "pulse" : ""}`} onCopy={copyTimer}>
+          <CopyToClipboard className="absolute top-2 right-2" text={this.state.codeValue} onCopy={copyTimer}>
         <div className="copy-area">
           <div className="flex items-center">
             <ClipboardCopyIcon className={`h-8 w-8 stroke-1 oxford rounded-sm bg-athens cursor-pointer ${this.state.isCopied ? "hidden" : "block"}`}/>
-            <ClipboardCheckIcon className={`h-8 w-8 stroke-1 text-green-500 rounded-sm bg-athens cursor-pointer ${this.state.isCopied ? "block" : "hidden"}`}/>
+            <ClipboardCheckIcon className={`h-8 w-8 stroke-1 text-green-500 rounded-sm bg-athens cursor-pointer ${this.state.isCopied ? "block pulse" : "hidden"}`}/>
           </div>
         </div>
       </CopyToClipboard>
