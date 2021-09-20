@@ -53,7 +53,10 @@ class CssGenerator extends React.Component {
                     </div>
                   </div>
                 </CopyToClipboard>
-                <FormCodeStyling isClassic={isClassic} />
+                <div className={`hello ${this.state.isClassic ? "fade-in" : "fade-in-2"}`}>
+                  <FormCodeStyling isClassic={isClassic} />
+                </div>
+                
             </div>  
         </div>
     );

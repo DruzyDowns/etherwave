@@ -36,7 +36,7 @@ export default function Home() {
       </footer>
       <EtherwaveForm menuIsOpen={false} />
       <script src="/web3.js"></script>
-      <script id="etherwave-script" src="/etherwave.js" data-destinationwallet="0x6BD1C9d673B14E9D6d7C1Cab1dCD921Ab7bD002d"></script>
+      <script id="etherwave-script" src="/etherwave.js" data-destinationwallet="0x1D6b509a0df53cE05c35EC07Ede7f97E3c603c4a"></script>
     </div>
   )
 }

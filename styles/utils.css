@@ -59,3 +59,33 @@ pre {
 .pulse {
   animation: pulse 1s linear infinite;
 }
+
+@keyframes fade-in {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(0, 24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@keyframes fade-in-2 {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(0, 24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.fade-in {
+  animation: fade-in 0.2s 0.1s ease-in-out both;
+}
+.fade-in-2 {
+  animation: fade-in-2 0.2s 0.1s ease-in-out both;
+}
