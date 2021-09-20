@@ -1,5 +1,5 @@
 function BadgeFormCSS(props) {
-  return <pre>{`/* etherwave popup modal form CSS */
+  return <pre><code>{`/* etherwave popup modal form CSS */
   
   /* font from https://rsms.me/inter/ */
 @import url("https://rsms.me/inter/inter.css");
@@ -184,7 +184,7 @@ https://twitter.com/riklomas */
     transform: rotate(360deg);
   }
 }
-`}</pre>;
+`}</code></pre>;
 }
 
 
