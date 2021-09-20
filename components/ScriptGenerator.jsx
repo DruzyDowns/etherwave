@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import {CopyToClipboard} from 'react-copy-to-clipboard';
+import { ClipboardCopyIcon } from '@heroicons/react/outline'
+import { ClipboardCheckIcon } from '@heroicons/react/outline'
 
 class ScriptGenerator extends React.Component {
   constructor(props) {
@@ -30,15 +32,16 @@ class ScriptGenerator extends React.Component {
           <input type="text" onChange={updateWallet} onPaste={updateWallet} />
         </label>
         <p>{this.state.codeValue}</p>
-        <CopyToClipboard text={this.state.codeValue} onCopy={copyTimer}>
+        
+        <div className="athens bg-oxford p-4 rounded-lg relative">
+          <CopyToClipboard className={`absolute top-2 right-2 ${this.state.isCopied ? "pulse" : ""}`} onCopy={copyTimer}>
         <div className="copy-area">
-          <p>Copy to Clipboard</p>
-          <span className={`${this.state.isCopied ? "pulse block" : "hidden"}`}>
-            Copied!
-          </span>
+          <div className="flex items-center">
+            <ClipboardCopyIcon className={`h-8 w-8 stroke-1 oxford rounded-sm bg-athens cursor-pointer ${this.state.isCopied ? "hidden" : "block"}`}/>
+            <ClipboardCheckIcon className={`h-8 w-8 stroke-1 text-green-500 rounded-sm bg-athens cursor-pointer ${this.state.isCopied ? "block" : "hidden"}`}/>
+          </div>
         </div>
       </CopyToClipboard>
-        <div className="athens bg-oxford p-4 rounded-lg">
             <pre>
                 <code ref={this.codeTextRef} className="code-text">
                     {`<script src="your/path/to/web3.js"></script>
