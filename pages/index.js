@@ -16,7 +16,7 @@ export default function Home() {
         <div className="w-full pb-12">
           <Logo />
         </div>
-        <p className="text-2xl">Magically add Ethereum tipjar/donation transactions for MetaMask to your website.</p>
+        <p className="text-3xl">Ethereum tipjar/donation transactions for  to your website.</p>
       </header>
       
       <main className="lg:px-64 text-xl">
