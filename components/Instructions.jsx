@@ -73,7 +73,7 @@ yarn: yarn add web3`}
           <p className="mb-4">If you are the designer type, or if you are going for a real web-of-the-90s unstyled look, just grab the selectors from the CSS below and have fun!</p>
           <CssGenerator />
           <h3 className="pt-16 pb-2 text-2xl font-bold uppercase tracking-widest">You're ready to go!</h3>
-          <p className="mb-4">I highly recommend you give this a thorough testing with some fake ETH on a <a className="underline" href="https://faucet.ropsten.be/">test network</a> before you go live, and as with all things crypto — please do your research. Ultimately you are the only one who can be responsible for the outcome of your journey.</p>
+          <p className="mb-4">I highly recommend you give this a thorough testing with some fake ETH on a <a className="underline" href="https://faucet.ropsten.be/" target="_blank" rel="noopener noreferrer">test network</a> before you go live, and as with all things crypto — please do your research. Ultimately you are the only one who can be responsible for the outcome of your journey.</p>
           <p className="mb-4">If you like this project, find success with your donations, or just want to support my work, you can do so with my Etherwave widget right here on this page (see what I did there?).</p>
           <p className="mb-4">I hope you can use this tool to get compensated for your amazing work, you deserve it, and  know you're gonna make it!</p>
       </div>
