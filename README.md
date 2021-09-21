@@ -1,6 +1,8 @@
 # Etherwave
 This project is meant to provide a quick, relatively painless setup for creative types to start accepting ETH donations/tips on their websites. You can preview how the script works (and donate!) with the functional version on the example page. Essentially it just takes the guesswork out of writing the JavaScript which talks to the MetaMask wallets and API. This is a work in progress, and I plan on adding more features to make it even easier to empower creatives with tools to work with the Ethereum protocol.
 
+## [Example page with instructions: etherwave.xyz](https://etherwave.xyz/)
+
 ## Getting started accepting eth transactions
 You'll need a wallet to test (and receive!) the transactions. This project is currently only set up for the end user to **send** transactions to you using MetaMask, but you can use any Ethereum address/wallet you prefer to **receive** the transactions.
 
