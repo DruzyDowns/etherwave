@@ -42,3 +42,9 @@ If you are going for a web-of-the-90s, unstyled look, just leave this CSS out. O
 I highly recommend you give this a thorough testing with some fake ETH on a [test network like Ropsten](https://faucet.ropsten.be/) before you go live, and as with all things crypto — please do your research. Ultimately you are the only one who can be responsible for the outcome of your journey.
 If you like this project, find success with your donations, or just want to support my work, you can do so with my Etherwave widget on the example page (whoah this is meta).
 I hope you can use this tool to get compensated for your amazing work, you deserve it, and  know you're gonna make it!
+
+
+Coming soon / to-do
+* Node package & React components
+* More refined styling and interactive customizable form builder
+* Support more wallets besides MetaMask
