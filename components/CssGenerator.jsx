@@ -61,8 +61,8 @@ class CssGenerator extends React.Component {
 }
 
 const BadgeCssCodeText = `/* etherwave popup modal form CSS */
-  
-  /* font from https://rsms.me/inter/ */
+
+/* font from https://rsms.me/inter/ */
 @import url("https://rsms.me/inter/inter.css");
 html {
   font-family: "Inter", sans-serif;
@@ -247,9 +247,8 @@ https://twitter.com/riklomas */
 }
 `
 
-const StaticCssCodeText = `/* etherwave static form CSS */
-  
-  /* font from https://rsms.me/inter/ */
+const StaticCssCodeText = ` /* etherwave static form CSS */
+/* font from https://rsms.me/inter/ */
 @import url("https://rsms.me/inter/inter.css");
 html {
   font-family: "Inter", sans-serif;
@@ -416,6 +415,7 @@ https://twitter.com/riklomas */
     transform: rotate(360deg);
   }
 }
+
 `
 
 export default CssGenerator;
