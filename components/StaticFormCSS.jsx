@@ -1,5 +1,5 @@
-function StaticFormCSS(props) {
-  return <pre><code>{`/* etherwave static form CSS */
+function StaticFormCSS(props, isClassic) {
+  return <pre className={`${ isClassic ? "fade-in" : "fade-in-2"}`}><code>{`/* etherwave static form CSS */
   
   /* font from https://rsms.me/inter/ */
 @import url("https://rsms.me/inter/inter.css");

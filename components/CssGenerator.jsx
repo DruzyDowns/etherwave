@@ -8,9 +8,9 @@ import { ClipboardCheckIcon } from '@heroicons/react/outline'
 function FormCodeStyling(props) {
   const isClassic = props.isClassic;
   if (isClassic) {
-    return <StaticFormCSS  />;
+    return <StaticFormCSS className={`${ isClassic ? "fade-in" : "fade-in-2"}`} />;
   }
-  return <BadgeFormCSS />;
+  return <BadgeFormCSS className={`${ isClassic ? "fade-in-2" : "fade-in"}`} />;
 }
 
 class CssGenerator extends React.Component {
@@ -53,7 +53,7 @@ class CssGenerator extends React.Component {
                     </div>
                   </div>
                 </CopyToClipboard>   
-                <FormCodeStyling className={`hello ${this.state.isClassic ? "fade-in" : "fade-in-2"}`} isClassic={isClassic} />   
+                <FormCodeStyling isClassic={this.state.isClassic} />   
             </div>  
         </div>
     );

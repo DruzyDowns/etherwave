@@ -23,16 +23,42 @@ export default function Home() {
         <Instructions />
         
       </main>
-      <footer className="bg-white flex items-center justify-center w-full h-24 border-t">
+      <footer className="bg-white flex items-center justify-between w-full h-24 border-t px-4">
+        <a
+          className="underline"
+          href="https://github.com/DruzyDowns/etherwave"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Github repo
+        </a>
         <a
           className="flex items-center justify-center"
           href="https://ethereum.org/en/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Made possible by{' '}
+          Made possible by
           <img src="/eth.gif" alt="Ethereum Logo" className="h-16 w-auto" />
         </a>
+        <div className="flex pr-32">
+        <a
+          className="flex items-center justify-center pr-8"
+          href="https://computercomputer.io"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          created by Druzy
+        </a>
+        <a
+          className="flex items-center justify-center"
+          href="https://twitter.com/DruzyDowns"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          @druzydowns
+        </a>
+        </div>
       </footer>
       <EtherwaveForm menuIsOpen={false} />
       <script src="/web3.js"></script>
