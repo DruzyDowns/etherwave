@@ -6,7 +6,7 @@ let initializeEtherwave = () => {
     etherwaveIconCreation.id = "etherwave-icon";
     etherwaveBadgeCreation.id = "etherwave-badge";
     etherwaveFormCreation.id = "etherwave-form";
-    etherwaveFormCreation.innerHTML = `<label>If you like my work, please consider sending me a tip!</label><input value="0.01"><span>ETH</span><button>Tip</button><p class="etherwave-branding">powered by <a href="https://etherwave.xyz" rel="noopener">etherwave</a></p>`;
+    etherwaveFormCreation.innerHTML = `<label id="etherwave-message">If you like my work, please consider sending me a tip!</label><input value="0.01"><span>ETH</span><button>Tip</button><p class="etherwave-branding">powered by <a href="https://etherwave.xyz" rel="noopener">etherwave</a></p>`;
     etherwaveFormContainer.appendChild(etherwaveFormCreation);
     etherwaveFormContainer.appendChild(etherwaveIconCreation);
     etherwaveFormContainer.appendChild(etherwaveBadgeCreation);
@@ -19,6 +19,7 @@ const etherwaveBadge = document.getElementById("etherwave-badge");
 const etherwaveIcon = document.getElementById("etherwave-icon");
 const etherwaveForm = document.getElementById("etherwave-form");
 const etherwaveScript = document.getElementById("etherwave-script");
+const etherwaveMessage = document.getElementById("etherwave-message");
 const destinationWallet = etherwaveScript.getAttribute('data-destinationWallet');
 //const etherwaveIcon = document.querySelector("div.menu-bar");
 let etherwaveFormOpen = false;
@@ -63,6 +64,6 @@ etherwaveForm.addEventListener("submit", function (event) {
         send(input.value, destinationWallet)
     } else {
         etherwaveForm.style.backgroundColor = "red"
-        
+        etherwaveMessage.innerText = "Wallet Connect coming soon for mobile! Please visit on desktop to donate, thanks!"
     }
 })

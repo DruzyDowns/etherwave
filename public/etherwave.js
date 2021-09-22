@@ -4,6 +4,7 @@ const etherwaveIcon = document.getElementById("etherwave-icon");
 const etherwaveForm = document.getElementById("etherwave-form");
 const etherwaveScript = document.getElementById("etherwave-script");
 const destinationWallet = etherwaveScript.getAttribute('data-destinationWallet');
+const etherwaveMessage = document.getElementById("etherwave-message");
 
 
 const send = async function (amount, destination) {
@@ -30,7 +31,6 @@ etherwaveForm.addEventListener("submit", function (event) {
         const input = etherwaveForm.querySelector("input")
         send(input.value, destinationWallet)
     } else {
-        etherwaveForm.style.backgroundColor = "red"
-        
+        etherwaveMessage.innerText = "Wallet Connect coming soon for mobile! Please visit on desktop to donate, thanks!"
     }
 })
