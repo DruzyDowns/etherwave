@@ -63,6 +63,6 @@ etherwaveForm.addEventListener("submit", function (event) {
         const input = etherwaveForm.querySelector("input")
         send(input.value, destinationWallet)
     } else {
-        etherwaveMessage.innerText = "Wallet Connect coming soon for mobile! Please visit on desktop to donate, thanks!"
+        etherwaveMessage.innerText = "Wallet Connect coming soon for mobile and other wallets! Please visit on desktop to donate, thanks!"
     }
 })
