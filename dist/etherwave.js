@@ -63,7 +63,6 @@ etherwaveForm.addEventListener("submit", function (event) {
         const input = etherwaveForm.querySelector("input")
         send(input.value, destinationWallet)
     } else {
-        etherwaveForm.style.backgroundColor = "red"
         etherwaveMessage.innerText = "Wallet Connect coming soon for mobile! Please visit on desktop to donate, thanks!"
     }
 })
