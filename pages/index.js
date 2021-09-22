@@ -5,7 +5,7 @@ import EtherwaveForm from '../components/EtherwaveForm';
 
 export default function Home() {
   return (
-    <div className="w-full bg-athens oxford garamond text-lg">
+    <div className="w-full bg-athens oxford garamond text-lg p-4 lg:p-0">
       <Head>
         <title>etherwave</title>
         <link rel="stylesheet" href="https://use.typekit.net/plw3vwv.css" />
@@ -23,7 +23,7 @@ export default function Home() {
         <Instructions />
         
       </main>
-      <footer className="bg-white flex items-center justify-between w-full h-24 border-t px-4">
+      <footer className="bg-white lg:flex items-center justify-between w-full lg:h-24 border-t px-4">
         <a
           className="underline"
           href="https://github.com/DruzyDowns/etherwave"
@@ -33,7 +33,7 @@ export default function Home() {
           Github repo
         </a>
         <a
-          className="flex items-center justify-center"
+          className="flex items-center lg:justify-center"
           href="https://ethereum.org/en/"
           target="_blank"
           rel="noopener noreferrer"
@@ -41,9 +41,9 @@ export default function Home() {
           Made possible by
           <img src="/eth.gif" alt="Ethereum Logo" className="h-16 w-auto" />
         </a>
-        <div className="flex pr-32">
+        <div className="lg:flex lg:pr-32">
         <a
-          className="flex items-center justify-center pr-8"
+          className="flex items-center lg:justify-center lg:pr-8"
           href="https://computercomputer.io"
           target="_blank"
           rel="noopener noreferrer"
@@ -51,7 +51,7 @@ export default function Home() {
           created by Druzy
         </a>
         <a
-          className="flex items-center justify-center"
+          className="flex items-center lg:justify-center"
           href="https://twitter.com/DruzyDowns"
           target="_blank"
           rel="noopener noreferrer"
